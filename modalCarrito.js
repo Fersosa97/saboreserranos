@@ -34,6 +34,7 @@ modalCarrito.addEventListener ("click", (e) =>{
 
 abrirMetodoPago.addEventListener("click", () =>{
     modalPagoContenedor.classList.toggle("modal-active-pago"); 
+    modalContenedor.classList.toggle("modal-active");
 })
 
 cerrarMetodoPago.addEventListener("click", ()=>{

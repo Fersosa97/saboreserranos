@@ -159,7 +159,7 @@ color: var(--bg-color);
 }
 
 .modal-pago-contenedor{
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: 100vh;
@@ -957,6 +957,7 @@ color: var(--bg-color);
 	max-width: 710px;
 	padding: 150px 30px 30px 30px;
 	border-radius: 10px;
+  border: 5px solid var(--font-color);
 	position: relative;
 	top: -150px;
 	z-index: 1;
@@ -1412,6 +1413,11 @@ color: var(--bg-color);
   }
 }
 
+@media only screen and (min-width:1200px){
+  .slogan{
+    padding-top: 20%;
+  }
+}
 
 
 
