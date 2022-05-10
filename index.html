@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabores Serranos</title>
+    <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Librerias Google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="yourpath/magic.css">
+    <link rel="stylesheet" href="yourpath/magic.min.css">
+    <link rel="stylesheet" href="./estilos.css" />
+  </head>
+  <body>
+  <!--Barra de navegacion comienza-->
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg menu">
+      <div class="container">
+        <!--Navbrand logo-->
+        <a class="navbar-brand" href="./index.html"><img src="./imagenes/sabores-serranoslogo.jpg.jpg" alt="" class="imagenBrand"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Carrito de compras-->
+        <div class="icons">
+          <button class="fas fa-shopping-cart carrito" id="cart-btn"></button> 
+          <span id="contador-carrito" class="unidadesCarrito">0</span>
+        </div>
+        <!--Menu navbar-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav opcionDesplegable m-auto mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#menu-principal">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#asociate">Asociate</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>      
+  <!--Barra de Navegacion Finaliza-->
+  <!--Comienzo de main-->
+    <main class="main">
+      <!--Comienza banner-->
+      <section class="banner">
+        <div class="slogan">
+          <p>Disfruta de nuestros productos </br><span class="typed"></span></p>
+        </div>
+      </section>
+      <!--Finaliza banner-->  
+      <!--Comienza caracteristicas del servicio-->
+      <section class="caracteristicaServicio" id ="services">
+        <div class="caracteristica">
+          <span class="material-icons-outlined">local_shipping</span>
+          <h5>Envios a todo el pais</h5>
+      </div>
+      <div class="caracteristica">
+          <span class="material-icons-outlined">schedule</span>
+          <h5>Atencion de 9 a 18hs</h5>
+      </div>
+      <div class="caracteristica">
+          <span class="material-icons-outlined">paid</span>
+          <h5>Efectivo, debito y credito</h5>
+      </div>
+      </section>
+      <!--Finaliza caracteristicas del servicio-->
+      <!--Comienza productos destacados-->
+      <section class="menuPrincipal">
+        <div class ="nuestrosProductos"id="menu-principal">
+        </div>
+      </section>
+      <section>
+        <div class="modal-contenedor">
+          <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+            <div class="botonesCarritoCompra">
+              <button class="finalizarCompra" id="finalizarCompra">Finalizar compra</button>
+              <button class="vaciarCarrito" id="vaciarCarrito">Vaciar carrito</button>
+            </div>
+          </div>
+        </div>
+      </section> 
+      <section>
+        <div class="modal-pago-contenedor">
+          <div class="modal-pago">
+            <button id="btn-cerrar-pago"><i class="fas fa-times-circle cerrarPago"></i></button>
+            <div id="pago-contenedor">
+              <div class="contenedor">
+                <!-- Tarjeta -->
+                <section class="tarjeta" id="tarjeta">
+                  <div class="delantera">
+                    <div class="logo-marca" id="logo-marca">
+                    </div>
+                    <img src="./imagenes/chip-tarjeta.png" class="chip" alt="">
+                    <div class="datos">
+                      <div class="grupo" id="numero">
+                        <p class="label">Número Tarjeta</p>
+                        <p class="numero">#### #### #### ####</p>
+                      </div>
+                      <div class="flexbox">
+                        <div class="grupo" id="nombre">
+                          <p class="label">Nombre Tarjeta</p>
+                          <p class="nombre">Fernando Sosa</p>
+                        </div>
+      
+                        <div class="grupo" id="expiracion">
+                          <p class="label">Expiracion</p>
+                          <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trasera">
+                    <div class="barra-magnetica"></div>
+                    <div class="datos">
+                      <div class="grupo" id="firma">
+                        <p class="label">Firma</p>
+                        <div class="firma"><p></p></div>
+                      </div>
+                      <div class="grupo" id="ccv">
+                        <p class="label">CCV</p>
+                        <p class="ccv"></p>
+                      </div>
+                    </div>
+                    <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
+                    <a href="#" class="link-banco">www.tubanco.com</a>
+                  </div>
+                </section>
+                <!-- Contenedor Boton Abrir Formulario -->
+                <div class="contenedor-btn">
+                  <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <!-- Formulario Datos personales del usuario -->
+                <form id="formulario-tarjeta" class="formulario-tarjeta">
+                  <div class="grupo">
+                    <label for="inputNumero">Número Tarjeta</label>
+                    <input type="text" id="inputNumero" maxlength="19" autocomplete="off" required>
+                  </div>
+                  <div class="grupo">
+                    <label for="inputNombre">Nombre</label>
+                    <input type="text" id="inputNombre" maxlength="19" autocomplete="off" required>
+                  </div>
+                  <div class="flexbox">
+                    <div class="grupo expira">
+                      <label for="selectMes">Expiracion</label>
+                      <div class="flexbox">
+                        <div class="grupo-select">
+                          <select name="mes" id="selectMes">
+                            <option disabled selected>Mes</option>
+                          </select>
+                          <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="grupo-select">
+                          <select name="year" id="selectYear">
+                            <option disabled selected>Año</option>
+                          </select>
+                          <i class="fas fa-angle-down"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grupo ccv">
+                      <label for="inputCCV">CCV</label>
+                      <input type="text" id="inputCCV" maxlength="3" required>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-outline-success" id="confirmarCompra">Pagar</button>                
+                </form>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>  
+      <section class="sobreNosotros" id="nosotros">
+        <div class="sobreNosotros_contenido">
+          <h1>Nosotros</h1>
+          <p>
+            Sabores Serranos nace como un ecommerce destinado a la venta y promocion de productos regionales
+            de la ciudad de Tandil. 
+          </p>
+          <p>
+            Los precios de los productos y la comercialización de los mismos es totalmente ficticia. El desarrollo del negocio esta 100%
+            focalizado en el aprendizaje y puesta en practica de conocimientos adquiridos en el curso de programación de JavaScript dictado en Coder House
+            entre los meses Marzo - Mayo de 2022.  
+          </p>
+        </div>
+      </section>
+      <section class="marcasAsociadas">
+        <div class="marcasAsociadas_titulo">
+          <h1>Marcas asociadas</h1>   
+        </div>
+        <div class="marcasAsociadas_tipos">
+          <div class="marcasAsociadas_tipos_marcas">
+            <img src="./imagenes/iconoCagnoli.jpg" alt="Salamines Cagnoli">
+            <a href="https://www.instagram.com/cagnoli_tandil/" target="_blank">Ver más</a>
+          </div>
+          <div class="marcasAsociadas_tipos_marcas">
+            <img src="./imagenes/tandiliaIcono.jpg" alt="Cerveceria Tandilia">
+            <a href="https://www.instagram.com/tandiliataproom/" target="_blank">Ver más</a>
+          </div>  
+          <div class="marcasAsociadas_tipos_marcas">
+            <img src="./imagenes/donAtilioIcono.jpg" alt="Don Atilio" class="donAtilio">
+            <a href="https://www.instagram.com/donatilioquesos/" target="_blank">Ver más</a>
+          </div>
+          <div class="marcasAsociadas_tipos_marcas">
+            <img src="./imagenes/elReencuentro-icono.jpg" alt="El Reencuentro">
+            <a href="https://www.instagram.com/granjaelreencuentro/" target="_blank">Ver más</a>
+          </div>
+        </div>
+      </section>
+      <section id="asociate">
+        <div class="formulario">
+          <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+              <h3>No esperes más, <span class="asociateAhora">asociate</span>!</h3>
+              <form action="" id="formularioParaAsociarse">
+                  <p>
+                      <label>Nombre completo</label>
+                      <input type="text" name="fullname" id="nombreCompleto" required>
+                  </p>
+                  <p>
+                      <label>Email de contacto</label>
+                      <input type="email" name="email" id="email-contacto" required>
+                  </p>
+                  <p>
+                      <label>Celular de contacto</label>
+                      <input type="tel" name="phone" id="numero-contacto">
+                  </p>
+                  <p>
+                      <label>Nombre de la empresa</label>
+                      <input type="text" name="affair" id="nombre-empresa" required>
+                  </p>
+                  <p class="block">
+                    <label>Agrega una nota</label> 
+                      <textarea name="message" rows="3"></textarea>
+                  </p>
+                  <button>
+                      <input type="submit" class="submit" id ="enviarForm">
+                  </button>
+                  <button>
+                      <input type="reset" class="reset" id="eliminarForm">
+                  </button>   
+              </form>
+            </div>
+          </div>
+      </section> 
+      
+    <!--Finaliza productos destacados-->
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./getData.js" type="module"></script>
+  <script src="./productos.json"></script>
+  <script src="./carritoIndex.js" type="module"></script>
+  <script src="./actualizarCarrito.js" type="module"></script>
+  <script src="./modalCarrito.js" type="module"></script>
+  <script src="./app.js" type="module"></script>
+  <script src="./opcionesDeProductos.js" type="module"></script>
+  <script src="./main.js"></script>
+  <script src="./pagoCompra.js"></script>
+  <script src="./asociate.js"></script>
+  <script src="sweetalert2.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="sweetalert2.all.min.js"></script>
+
+  </body>
+</html> 

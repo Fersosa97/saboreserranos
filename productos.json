@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "imagen": "./imagenes/salame1.jpg",
+        "nombre": "Picado grueso",
+        "precio": 400,
+        "stock": 10,
+        "tipo": "salamin"
+    },
+
+    {
+        "id": 2,
+        "imagen": "./imagenes/salamin-picado-fino2.jpg",
+        "nombre": "Picado fino",
+        "precio": 400,
+        "stock": 10,
+        "tipo": "salamin"
+    },
+
+    {
+        "id": 3,
+        "imagen": "./imagenes/picado-grueso-pimienta.jpg",
+        "nombre": "Picado grueso pimienta",
+        "precio": 1500,
+        "stock": 6,
+        "tipo": "salamin"
+    },
+
+    {
+        "id": 4,
+        "imagen": "./imagenes/picado-fino-al-aji-jpg.jpg",
+        "nombre": "Picado fino al aji",
+        "precio": 1500,
+        "stock": 7,
+        "tipo": "salamin"
+    },
+
+    {
+        "id": 5,
+        "imagen": "./imagenes/fuet-tandil.jpg",
+        "nombre": "Fuet tradicional",
+        "precio": 500,
+        "stock": 8,
+        "tipo":"salamin"
+    },
+
+    {
+        "id": 6,
+        "imagen": "./imagenes/fuet-serrano.jpg",
+        "nombre": "Fuet con jamon crudo",
+        "precio": 650,
+        "stock": 5,
+        "tipo": "salamin"
+    },
+
+    {
+        "id": 7,
+        "imagen": "./imagenes/spianatta-al-aji.jpg",
+        "nombre": "Spianatta",
+        "precio": 2400,
+        "stock": 7,
+        "tipo": "salamin"
+
+    },
+
+    {
+        "id": 8,
+        "imagen": "./imagenes/don-atilio-ahumado.jpg",
+        "nombre": "Queso Ahumado",
+        "precio": 1320,
+        "stock": 10,
+        "tipo": "queso"
+
+    },
+
+    {
+        "id": 9,
+        "imagen": "./imagenes/don-atilio-oregano.jpg",
+        "nombre": "Queso al oregano",
+        "precio": 1320,
+        "stock": 10,
+        "tipo": "queso"
+
+    },
+
+    {
+        "id": 10,
+        "imagen": "./imagenes/Reggianito.jpg",
+        "nombre": "Queso Reggianito",
+        "precio": 1280,
+        "stock": 4,
+        "tipo": "queso"
+
+    },
+
+    {
+        "id": 11,
+        "imagen": "./imagenes/Petato.jpg",
+        "nombre": "Queso Petato",
+        "precio": 1320,
+        "stock": 10,
+        "tipo": "queso"
+    },
+
+    {
+        "id": 12,
+        "imagen": "./imagenes/tandilia-ipa2.jpg",
+        "nombre": "Cerveza Ipa",
+        "precio": 500,
+        "stock": 35,
+        "tipo": "cerveza"
+
+    },
+
+    {
+        "id": 13,
+        "imagen": "./imagenes/tandilia-red1.jpg",
+        "nombre": "Cerveza Red",
+        "precio": 450,
+        "stock": 20,
+        "tipo": "cerveza"
+    },
+
+    {
+        "id": 14,
+        "imagen": "./imagenes/tandilia-honey1.jpg",
+        "nombre": "Cerveza Honey",
+        "precio": 450,
+        "stock": 20,
+        "tipo": "cerveza"
+    },
+
+    {
+        "id": 15,
+        "imagen": "./imagenes/tandilia-blondie.jpg",
+        "nombre": "Cerveza Blondie",
+        "precio": 450,
+        "stock": 20,
+        "tipo": "cerveza"
+    },
+
+    {
+        "id": 16,
+        "imagen": "./imagenes/tandilia-rockaway.jpg",
+        "nombre": "Cerveza Rockaway",
+        "precio": 450,
+        "stock": 20,
+        "tipo": "cerveza"
+    }
+]

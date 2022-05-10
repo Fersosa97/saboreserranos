@@ -1,0 +1,1418 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+/*Iconos google*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+:root{
+  --bg-color: #f4f3ee; 
+  --font-color: #003049; 
+  --font-hover: #669bbc; 
+  --card-bg-color: #fcf7eb;
+  --favorito: #c1121f; 
+  --agregarCarrito: #52b788; 
+}
+
+
+.menuPrincipal{
+  background-image: url(./imagenes/mapa-tandil.jpg);
+  background-attachment:fixed;
+  margin: 0px auto;
+}
+
+
+.caracteristicaServicio{
+  margin: 0px auto;
+  background: linear-gradient(#fcf7eb,#fff ); 
+}
+
+/*           Barra de Navegacion            */
+
+.menu{
+  font-size: 1.2rem;
+  background-color: var(--font-color);
+
+}
+.imagenBrand{
+  width: 160px;
+  border-radius: 10px;
+}
+.menu .container .nav-item a{
+  color: #fff;
+  font-weight: bolder;
+}
+.navbar .container{
+  justify-content: space-evenly;
+}
+.menu .container .nav-item a:hover{
+  color: var(--font-hover);
+  transition: 0.7s ease;
+}
+
+.menu-item{
+  position: relative;
+  left: 7%;
+}
+
+.menu .opciones{
+  background-color: inherit;
+}
+
+/*Icono carrito de compras*/
+
+.icons{  
+cursor: pointer;
+font-size: 2rem;
+margin-left: 2rem;
+}
+
+.carrito{
+padding: 6px;
+position: relative;
+left: 5%;
+background-color: transparent;
+border: none;
+color: var(--bg-color);
+}
+
+.carrito:hover{
+  color: var(--font-hover);
+  transition: 0.7s ease;
+}
+
+.opcionDesplegable{
+  position: relative;
+  left: 25%;
+}
+
+.precioCarrito{
+  color: #003049;
+}
+.buscador-lupa{
+  position: relative;
+  left: 50%;
+  width: 520px;
+}
+
+.lupa{
+  cursor: pointer;
+  background: transparent;
+  font-size: 1.7rem;
+  border: none;
+  position: relative; 
+  left: 52%;
+  color: var(--bg-color);
+}
+
+.lupa:hover{
+  color: var(--font-hover);
+  transition: 0.7s ease;
+}
+
+/*      Modal Carrito      */
+
+.unidadesCarrito{
+  position: absolute;
+  top: 10px;
+  font-size: 12px;
+  color: var(--card-bg-color);
+  font-weight: 700;
+  background-color: crimson;
+  padding: 2px 8px;
+  border-radius: 20px;
+  
+}
+
+.btn-success {
+  margin: 0px 10px;
+}
+
+.btn-outline-success{
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-active{
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+.modal-pago-contenedor{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  }
+
+.modal-active-pago{
+  opacity: 1;
+  visibility: visible;
+  z-index: 50;
+}
+
+.modal-active-fin{
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  width: 700px;
+  margin-top: -100%;
+  transition: all .5s;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.modal-pago{
+  position: relative;
+  top: 150px;
+  padding: 20px;
+  width: 900px;
+  max-height: 1200px;
+  transition: all .5s;
+  border-radius: 10px;
+  z-index: 1800;
+}
+
+.modal-active .modal-carrito {
+  margin-top: 0;
+}
+
+.modal-carrito h3 {
+  color: rgb(225, 76, 65);
+  padding-bottom: 5px;
+}
+
+.modal-pago h3 {
+  color: rgb(225, 76, 65);
+  padding-bottom: 5px;
+}
+
+.modal-carrito #btn-cerrar-carrito , .modal-pago-contenedor #btn-cerrar-pago {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: rgb(225, 76, 65) !important;
+  border: none;
+  background-color: white;
+} 
+
+.modal-pago-contenedor #btn-cerrar-pago{
+  border-radius: 50%;
+  padding: 8px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.modal-carrito #btn-cerrar-carrito:hover {
+  cursor: pointer;
+}
+
+.modal-carrito #btn-cerrar-carrito:focus {
+  outline: none;
+}
+
+.modal-carrito .producto-precio {
+  padding-top: 10px;
+}
+
+
+.card .card-image .card-title {
+  color: rgb(225, 76, 65);
+  position: unset
+}
+
+.productoEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productoEnCarrito:hover {
+  border-left: 5px solid rgb(225, 76, 65);
+}
+
+.boton-eliminar {
+  background-color: white;
+  color: red;
+  border: none;
+  font-size: 20px;
+}
+
+.boton-eliminar:hover {
+  cursor: pointer;
+}
+
+.boton-eliminar:focus {
+  outline: none;
+}
+
+.botonesCarritoCompra{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.botonesCarritoCompra button{
+  padding: 5px;
+  border-radius: 10px;  
+
+}
+
+.finalizarCompra {
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 3px solid #57cc99;
+  color: #57cc99;
+}
+.finalizarCompra:hover{
+  color: #fff;
+}
+
+.finalizarCompra:hover:after {
+  height: 100%;
+}
+.finalizarCompra:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #57cc99;
+  color: #fff;
+}
+
+.finalizarCompra a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.vaciarCarrito {
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #d90429;
+  color: #d90429;
+}
+.vaciarCarrito:hover {
+  color: #fff;
+
+}
+.vaciarCarrito:hover:after {
+  height: 100%;
+}
+
+.vaciarCarrito:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #d90429;
+}
+
+
+/*        Banner          */
+
+.banner{
+  height: 70vh;
+  background-image: url(./imagenes/salamin-elcentinela.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+  text-align: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.banner::before{
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+}
+
+.slogan{
+  font-size: 3rem;
+  padding-top: 25%;
+}
+
+.slogan p{
+  padding-top: 1%;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.typed{
+  color: var(--font-hover);
+}
+
+/*      Caracteristicas del servicio      */
+
+.caracteristicaServicio{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+}
+
+.caracteristica{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  color: var(--font-color);
+}
+
+
+
+.caracteristica span{
+  font-size: 4rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.caracteristica h5{
+  font-weight: bolder;
+}
+
+/*         Nuestros productos         */
+
+.nuestrosProductos{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+}
+
+.card-body{
+  background-color: var(--card-bg-color) ;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+.nombreProducto{
+  font-weight: bolder;
+  color: var(--font-color);
+}
+
+
+.card-img-top{
+  width: 200px;
+  height: 370px;
+  cursor: pointer;
+}
+
+
+.info-producto{
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.precioProducto{
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.opcionBoton{
+  width: 100%;
+  margin: 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.favorito{
+  padding: 6px;
+  border-radius: 50%;
+  color: var(--favorito);
+  background-color: white;
+  font-size: 1.4rem;
+  border: 3px solid var(--favorito);
+}
+
+.favorito:hover{
+  background-color: var(--favorito);
+  color: white;
+  border: 3px solid white;
+  transition: ease 1.2s;
+}
+
+.agregarProducto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  color: var(--agregarCarrito); 
+  background-color: white;
+  font-size: 1.4rem;
+  border: 3px solid var(--agregarCarrito);
+}
+
+.agregarProducto:hover{
+  background-color: var(--agregarCarrito);
+  color: white;
+  border: 3px solid white;
+  transition: ease 1.2s;
+}
+
+
+
+
+.tituloProducto{
+  width: 100%;
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.opcionesDeProductos{
+  max-width: 1400px;  
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardProducto{
+  margin: 30px 15px;
+  width: 15vw;
+  height: auto; 
+}
+
+.imagenProducto{
+  width: 100%;
+  max-height: 200px;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+
+
+.card-body p{
+  font-size: 2rem;
+  margin: 0;
+}
+
+
+
+/*          Nosotros          */
+
+.sobreNosotros{
+  width: 100%;
+  height: auto;
+  color: var(--font-color);
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.sobreNosotros h1{
+  font-size: 3rem;
+}
+.sobreNosotros_contenido{
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px auto;
+}
+.sobreNosotros_contenido p{
+  margin: 10px 0px;
+}
+
+.sobreNosotros_contenido p:first-of-type{
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.sobreNosotros_contenido p:last-of-type{
+  font-size: 0.7rem;
+}
+
+.marcasAsociadas{
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  background-color: var(--card-bg-color);
+}
+
+.marcasAsociadas_titulo h1{
+  margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  color: var(--font-color);
+}
+.marcasAsociadas_tipos{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.marcasAsociadas_tipos_marcas{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.marcasAsociadas_tipos_marcas img{
+  width: 200px;
+  border-radius: 50%;
+  margin: 10px 5px;
+  
+}
+
+.marcasAsociadas_tipos_marcas a{
+  font-size: 1.1rem;
+  color: var(--font-color);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.donAtilio{
+  border: 8px solid black;
+}
+
+
+
+
+/* Formulario para asociarse  */
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.contact-form {
+  background: var(--font-color);
+}
+
+.contact-form h3{
+  text-align: center;
+  color: var(--card-bg-color);
+  font-size: 2rem;
+}
+
+.contact-form .asociateAhora{
+  color: var(--agregarCarrito);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bolder;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+  display: block;
+  color: #fff;
+}
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+
+.contact-form form .block {
+  grid-column: 1 / 3;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: .7em;
+  border: none;
+  background: none;
+  outline: 0;
+  border-bottom: 2px solid var(--card-bg-color);
+}
+.contact-form form textarea{
+    color: #fff;
+}
+
+.contact-form form input{
+    color: #fff;
+
+}
+.contact-form form button {
+  background: var(--card-bg-color);
+  border-left: 2px solid var(--font-color);
+  text-transform: uppercase;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.contact-form form button input{
+    color: var(--font-color);
+
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+
+  transition: 1.3s ease-out;
+  outline: 0;
+}
+.contact-form form button:hover input{
+  color: #fff;
+}
+.contact-form form button:first-of-type:hover{
+  background-color: var(--agregarCarrito);
+
+}
+
+.contact-form form button:last-of-type:hover{
+  background-color: var(--favorito);
+
+
+}
+
+/*     Finalizar compra con tarjeta      */ 
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	padding: 40px 20px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  z-index: 10000;
+}
+
+/* ---------- Estilos Generales de las Tarjetas ----------*/
+.tarjeta {
+	width: 100%;
+	max-width: 550px;
+	position: relative;
+	color: #fff;
+	transition: .3s ease all;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.tarjeta.active {
+	transform: rotateY(180deg);
+}
+
+.tarjeta > div {
+	padding: 30px;
+	border-radius: 15px;
+	min-height: 315px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+}
+
+/* ---------- Tarjeta Delantera ----------*/
+
+.tarjeta .delantera {
+	width: 100%;
+	background: url(./imagenes/bg-tarjeta/bg-tarjeta-01.jpg);
+	background-size: cover;
+}
+
+.delantera .logo-marca {
+	text-align: right;
+	min-height: 50px;
+}
+
+.delantera .logo-marca img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	max-width: 80px;
+}
+
+.delantera .chip {
+	width: 100%;
+	max-width: 50px;
+	margin-bottom: 20px;
+}
+
+.delantera .grupo .label {
+	font-size: 16px;
+	color: #7d8994;
+	margin-bottom: 5px;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion {
+	color: #fff;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.delantera .flexbox {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+/* ---------- Tarjeta Trasera ----------*/
+.trasera {
+	background: url(./imagenes/bg-tarjeta/bg-tarjeta-01.jpg);
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+.trasera .barra-magnetica {
+	height: 40px;
+	background: #000;
+	width: 100%;
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+
+.trasera .datos {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.trasera .datos p {
+	margin-bottom: 5px;
+}
+
+.trasera .datos #firma {
+	width: 70%;
+}
+
+.trasera .datos #firma .firma {
+	height: 40px;
+	background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+}
+
+.trasera .datos #firma .firma p {
+	line-height: 40px;
+	font-family: 'Liu Jian Mao Cao', cursive;
+	color: #000;
+	font-size: 30px;
+	padding: 0 10px;
+	text-transform: capitalize;
+}
+
+.trasera .datos #ccv {
+	width: 20%;
+}
+
+.trasera .datos #ccv .ccv {
+	background: #fff;
+	height: 40px;
+	color: #000;
+	padding: 10px;
+	text-align: center;
+}
+
+.trasera .leyenda {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.trasera .link-banco {
+	font-size: 14px;
+	color: #fff;
+}
+
+/* ---------- Contenedor Boton ----------*/
+.contenedor-btn .btn-abrir-formulario {
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 20px;
+	background: #2364d2;
+	color: #fff;
+	position: relative;
+	top: -25px;
+	z-index: 3;
+	border-radius: 100%;
+	box-shadow: -5px 4px 8px rgba(24,56,182,0.4);
+	padding: 5px;
+	transition: all .2s ease;
+	border: none;
+	cursor: pointer;
+}
+
+.contenedor-btn .btn-abrir-formulario:hover {
+	background: #1850b1;
+}
+
+.contenedor-btn .btn-abrir-formulario.active {
+	transform: rotate(45deg);
+}
+
+/* ---------- Formulario Tarjeta ----------*/
+.formulario-tarjeta {
+	background: #fff;
+	width: 100%;
+	max-width: 710px;
+	padding: 150px 30px 30px 30px;
+	border-radius: 10px;
+	position: relative;
+	top: -150px;
+	z-index: 1;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	transition: clip-path .3s ease-out;
+}
+
+.formulario-tarjeta.active {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+	display: block;
+	color: var(--font-color);
+  font-weight: bolder;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+	border: 2px solid #CED6E0;
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+	border: 2px solid #93BDED;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+	outline: rgb(4,4,4);
+	box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+}
+
+.formulario-tarjeta input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+	width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+	min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+	width: 100%;
+	margin-right: 15px;
+	position: relative;
+}
+
+.formulario-tarjeta select {
+	-webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select i {
+	position: absolute;
+	color: #CED6E0;
+	top: 18px;
+	right: 15px;
+	transition: .3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover i {
+	color: #93bfed;
+}
+
+.formulario-tarjeta .btn-enviar {
+	border: none;
+	padding: 10px;
+	font-size: 22px;
+	color: #fff;
+	background: var(--agregarCarrito);
+	box-shadow: 2px 2px 10px 0px rgba(0,85,212,0.4);
+	cursor: pointer;
+}
+
+
+/*             RESPONSIVE MOBILE          */
+@media only screen and (max-width:600px){
+
+  .imagenBrand{
+    width: 135px;
+  }
+  .navbar-toggler{
+    position: absolute;
+    left: 10%;
+  }
+
+  .navbar-brand{
+    position: relative;
+    left: 25%;
+  }
+  
+  .icons{
+    position: relative;
+    left: 1%;
+  }
+
+  .unidadesCarrito{
+    top: 0px;
+  }
+
+  .caracteristicaServicio , .menuPrincipal{
+    margin: 0px 20px;
+  }
+  .caracteristicaServicio{
+    background: transparent;
+  }
+ 
+  .banner{
+    height: 100vh;
+    background-position: bottom;
+    background-attachment: scroll;
+
+  }
+  .slogan {
+    font-size: 1rem;
+    padding-top: 10%;
+  }
+
+  .modal-carrito{
+    width: 280px;
+    padding: 10px;
+  }
+
+  .modal-carrito h3{
+    text-align: center;
+  }
+
+  .modal-carrito #btn-cerrar-carrito {
+    top: 5px;
+    right: 10px;
+  }
+
+  .productoEnCarrito{
+    margin: 10px auto;
+    padding: 0px 5px;
+    flex-direction: column;
+  }
+ 
+  .finalizarCompra{
+    width: 120px;
+  }
+
+  .modal-pago-contenedor{
+      height: 70vh;
+    }
+  
+    .modal-pago-contenedor #btn-cerrar-pago{
+      top: 150px;
+      right: 7px;
+    }
+  .contenedor{
+    padding: 40px 10px;
+  }
+
+  .formulario-tarjeta{
+    top: -170px;
+  }
+  
+  .vaciarCarrito{
+    width: 120px;
+  }
+
+
+  .sobreNosotros_contenido{
+    width: 100%;
+  }
+
+  .marcasAsociadas_tipos{
+    flex-wrap: wrap;
+  }
+
+  /*      Caracteristicas del servicio      */
+
+  .caracteristica{
+    height: auto;
+    margin: 10px auto;
+
+  }
+  .caracteristica span{
+    font-size: 3rem;
+  }
+
+  .caracteristica h5{
+    font-size: 1.2rem;
+  }
+
+  /*         Nuestros productos         */
+
+  .nuestrosProductos{
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+  .cardProducto{
+    width: 100%;
+    margin: 10px auto;
+  }
+
+}
+
+.sobreNosotros{
+  background-color: #fcbf49;
+  color: var(--font-color);
+  text-align: left;
+  text-align: justify;
+}
+
+.sobreNosotros h1{
+  color: var(--font-color);
+}
+
+.sobreNosotros_contenido{
+  padding: 5px 25px;
+}
+
+.sobreNosotros_contenido p:first-of-type{
+  font-size: 1rem;
+}
+
+.sobreNosotros_contenido p:last-of-type{
+  font-size: 0.6rem;
+}
+
+.marcasAsociadas_titulo h1{
+  text-align: left;
+  padding: 5px 25px;
+}
+.marcasAsociadas_tipos_marcas img{
+  width: 140px;
+}
+
+.seccionDePago{
+  background-image: url(./imagenes/mapa-tandil.jpg);
+  
+}
+
+.zonaDePago{
+  width: 100%;
+  height: auto;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.zonaDePago h1{
+  font-size: 3.5rem;
+}
+@media only screen and (min-width:601px) and (max-width:768px){
+
+  .imagenBrand{
+    width: 160px;
+  }
+  .navbar-toggler{
+    position: absolute;
+    left: 10%;
+  }
+
+  .navbar-brand{
+    position: relative;
+    left: 20%;
+  }
+  
+  .icons{
+    position: relative;
+    left: 20%;
+  }
+  
+  .unidadesCarrito{
+    top: 0;
+  }
+  .cardProducto{
+    width: 40%;
+
+  }
+  
+  .sobreNosotros_contenido{
+    width: 100%;
+    padding: 5px 30px;
+  }
+
+  .marcasAsociadas_titulo h1{
+    padding: 5px 30px;
+  }
+
+}
+@media only screen and (min-width:769px){
+
+
+  .navbar-brand{
+    position: absolute;
+    left: 5%;
+  }
+  
+  .icons{
+    position: relative;
+    left: 70%;
+  }
+  
+.navbar-collapse {
+  position: relative;
+  left: -30%;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+.navbar-expand-lg {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  display: flex!important;
+  flex-basis: auto;
+  flex-direction: row;
+}
+
+.navbar-nav{
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.navbar-toggler{
+  display: none;
+}
+
+.menu .container .nav-item a{
+  margin: 0px 10px;
+}
+
+.cardProducto{
+  width: 30%;
+  margin: 15px 10px;
+}
+.sobreNosotros_contenido{
+  width: 100%;
+}
+.icons span{
+  top: 0;
+}
+
+.nuestrosProductos{
+  margin: 30px auto;
+}
+}
+
+
+@media only screen and (min-width:900px){
+  .navbar-brand{
+    position: relative;
+    left: 5%;
+  }
+  
+  .icons{
+    position: relative;
+    left: 70%;
+  }
+  
+.navbar-collapse {
+  position: relative;
+  left: -30%;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+.sobreNosotros h1{
+  font-size: 3.5rem;
+}
+
+.sobreNosotros_contenido p:first-of-type{
+  font-size: 1.4rem;
+}
+
+
+.marcasAsociadas_titulo h1{
+  font-size: 3.5rem;
+
+
+}
+}
+
+@media only screen and (min-width:992px){
+  .navbar-brand{
+    position: relative;
+    left: 5%;
+  }
+  
+  .icons{
+    position: relative;
+    left: 80%;
+  }
+  
+.navbar-collapse {
+  position: relative;
+  left: -28%;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+}
+
+@media only screen and (min-width:1100px){
+  .cardProducto{
+    width: 20%;
+  }
+
+  .sobreNosotros{
+    text-align: center;
+    padding: 30px 50px;
+  }
+
+  .sobreNosotros h1{
+    font-size: 4rem;
+  }
+  .sobreNosotros_contenido p:first-of-type{
+    font-size: 1.7rem;
+  }
+
+  .marcasAsociadas{
+    height: 470px;
+    padding: 30px 0px;
+  }
+  .marcasAsociadas_tipos{
+    margin: 40px auto;
+  }
+  .marcasAsociadas_titulo h1{
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .marcasAsociadas_tipos_marcas img{
+    width: 220px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
