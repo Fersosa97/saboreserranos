@@ -11,6 +11,7 @@ let carritoStorage = [];
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
   mostrarProductos();
 
 
@@ -32,5 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 })
+
+
 
 

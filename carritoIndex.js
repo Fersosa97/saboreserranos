@@ -1,6 +1,7 @@
 import { actualizarCarrito, contadorCarrito, precioTotal, } from "./actualizarCarrito.js";
-import { arrayProductos } from "./productos.js";
 import { contenedorCarrito } from "./app.js";
+import { arrayProductos } from "./productos.js";
+
 
 
 let carritoDeCompras = [];
@@ -15,7 +16,7 @@ export const carritoIndex = (productoId, productoNombre) => {
   eliminarProductoCarrito(productoId, productoNombre);
 }
 
-//Hacer funcion que vacia el carrito por completo
+
 
 function limpiarHTML (){
   contenedorCarrito.innerHTML=""; 

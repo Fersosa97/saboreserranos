@@ -5,7 +5,7 @@ import { getData } from "./getData.js";
 export const mostrarProductos = async() => {
 
     const contenedorProductos = document.getElementById("menu-principal");
-    const productos = await getData(); //Utilizo el await cuando la funcion es asincronica (async)
+    const productos = await getData(); //Solo se utiliza cuando la funcion es asincronica (async)
 
     productos.forEach(producto => {
       
@@ -47,7 +47,6 @@ export const mostrarProductos = async() => {
     });
   });
 };
-
 
 
   
